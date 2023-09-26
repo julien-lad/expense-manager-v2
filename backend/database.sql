@@ -18,7 +18,7 @@ CREATE TABLE `expenses` (
 
 LOCK TABLES `expenses` WRITE;
 /*!40000 ALTER TABLE `expenses` DISABLE KEYS */;
-INSERT INTO `expenses` VALUES (1,'Course Alimentaire','20,30');
+INSERT INTO `expenses` VALUES (1,'Course Alimentaire','20,90');
 /*!40000 ALTER TABLE `expenses` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -41,6 +41,6 @@ CREATE TABLE `budjet` (
 
 LOCK TABLES `budjet` WRITE;
 /*!40000 ALTER TABLE `budjet` DISABLE KEYS */;
-INSERT INTO `budjet` VALUES (1,'200');
+INSERT INTO `budjet` VALUES (1,'250');
 /*!40000 ALTER TABLE `budjet` ENABLE KEYS */;
 UNLOCK TABLES;

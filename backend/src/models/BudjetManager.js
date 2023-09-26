@@ -6,14 +6,15 @@ class BudjetManager extends AbstractManager {
   }
 
   insert(budjet) {
-    return this.database.query(`insert into ${this.table} (title) values (?)`, [
-      budjet.title,
-    ]);
+    return this.database.query(
+      `insert into ${this.table} (budjet) values (?)`,
+      [budjet.budjet]
+    );
   }
 
   update(budjet) {
     return this.database.query(
-      `update ${this.table} set title = ? where id = ?`,
+      `update ${this.table} set budjet = ? where id = ?`,
       [budjet.budjet, budjet.id]
     );
   }
