@@ -1,3 +1,4 @@
+import "./Expenses.css";
 import React, { useState, useEffect } from "react";
 
 export default function Expenses() {
@@ -67,34 +68,38 @@ export default function Expenses() {
   };
 
   return (
-    <div className="expenses">
-      <h2>Your expenses</h2>
-      {expenses.map((expense, index) => (
-        <div key={expense.id}>
-          <form onSubmit={() => handleSave(index)}>
-            <label htmlFor="wording">Wording:</label>
-            <input
-              id="wording"
-              type="text"
-              name="wording"
-              value={expense.wording}
-              onChange={(e) => handleChange(e, index)}
-            />
-            <label htmlFor="amount">Amount:</label>
-            <input
-              id="amount"
-              type="text"
-              name="amout"
-              value={expense.amout}
-              onChange={(e) => handleChange(e, index)}
-            />
-            <button type="button" onClick={() => handleEdit(index)}>
-              Edit
-            </button>
-            <button type="submit">Save</button>
-          </form>
-        </div>
-      ))}
-    </div>
+    <>
+      <h2 className="expenses-h2">Your expenses</h2>
+      <div className="expenses-bloc">
+        {expenses.map((expense, index) => (
+          <div key={expense.id}>
+            <form onSubmit={() => handleSave(index)}>
+              <label htmlFor="wording">Wording:</label>
+              <input
+                className="amount-input"
+                id="wording"
+                type="text"
+                name="wording"
+                value={expense.wording}
+                onChange={(e) => handleChange(e, index)}
+              />
+              <label htmlFor="amount">Amount:</label>
+              <input
+                className="amount-input"
+                id="amount"
+                type="text"
+                name="amout"
+                value={expense.amout}
+                onChange={(e) => handleChange(e, index)}
+              />
+              <button type="button" onClick={() => handleEdit(index)}>
+                Edit
+              </button>
+              <button type="submit">Save</button>
+            </form>
+          </div>
+        ))}
+      </div>
+    </>
   );
 }

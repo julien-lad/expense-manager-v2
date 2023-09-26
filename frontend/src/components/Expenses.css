@@ -1,23 +1,25 @@
-.budjet-h2 {
+.expenses-h2 {
     text-align: center;
+    margin-top: 10%;
     margin-bottom: 8%;
 }
-.budjet-bloc {
+.expenses-bloc {
     background-color:  white;
     padding: 4% 0;
     margin: 0 10%;
     border-radius: 14px;
     box-shadow: 7px 7px 23px 1px rgba(255, 255, 255, 0.50);;
 }
-.budjet-bloc form {
+.expenses-bloc form {
     margin-bottom: 3%;
 }
-.budjet-bloc form, .rest {
+.expenses-bloc form {
     display: flex;
-    flex-direction:row;
-    align-items: center;
-    justify-content: center;
+    
 }
-.budjet-bloc label {
+.expenses-bloc label {
     color: black;
+}
+.amount-input {
+    width: 20vw;
 }
